@@ -19,7 +19,7 @@ Participants may use this implementation as a starting point for their solutions
 
 ### Training Dataset
 
-Hourly data for the WETH/USDC Uniswap v3 pool (0.05% fee tier), covering the period from **May 5, 2021 at 1:00 am to January 29, 2024 at 7:00 pm**. The dataset is sourced from the Uniswap Ethereum subgraph and resampled into an evenly spaced hourly series.
+Hourly data for the WETH/USDC Uniswap v3 pool (0.05% fee tier), covering the period from **May 5, 2021 at 1:00 am to January 29, 2024 at 7:00 pm**. The training dataset ends on January 29, 2024 at 7:00 pm. Participants may use their own train/validation split strategies, but must avoid relying on data beyond this timestamp. The dataset is sourced from the Uniswap Ethereum subgraph and resampled into an evenly spaced hourly series.
 
 Participants will be provided with the market price time series and a starter reinforcement learning environment (`Uniswapv3Env`) that constructs the state vector automatically at each time step. The environment internally computes the following state variables:
 
@@ -44,7 +44,9 @@ Participants will be provided with the market price time series and a starter re
 
 ### Testing Dataset (Held-Out)
 
-The final out-of-sample window, from **January 29, 2024 at 8:00 pm to April 29, 2024 at 7:00 pm**, will be held out for evaluation.
+While participants may validate using any strategy of their choice, final evaluation will be conducted on a private test window:
+January 29, 2024 at 8:00 pm to April 29, 2024 at 7:00 pm, which is not included in the released dataset.
+Participants should take care not to introduce lookahead bias when preparing features or targets, and must ensure that only past and current information is used at each time step during training and evaluation.
 
 ### Environment Code
 
@@ -66,8 +68,7 @@ using the Gymnasium interface and Stable Baselines3 PPO implementation.
 
 ## Evaluation Metrics and Methodology
 
-Submissions will be evaluated on a **fixed held-out testing period**:  
-**November 28, 2023 to January 29, 2024**, using the environment and data provided in the starter kit.
+For leaderboard scoring, submissions will be evaluated on a **fixed held-out testing period** as described above.
 
 The evaluation will focus on the **cumulative performance** of the agent over this entire test window.
 
@@ -98,6 +99,7 @@ The environment implementation provided in the starter kit **must remain unchang
 
 - The **reward function must not be modified**. It is already implemented in the environment and reflects the net value of an LP position after fees, losses, and gas costs.
 - The **gas fee is fixed at $5 per rebalancing** and must remain unchanged.
+- The initial amount of token X (base asset) is fixed at 2 units at the beginning of each episode and must not be altered to a different amount.
 
 ### Feature Engineering and External Data
 
