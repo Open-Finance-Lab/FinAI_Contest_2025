@@ -93,6 +93,19 @@ The agent's performance will be compared against a **passive LP baseline**, whic
 
 Agents must operate in a **discrete action space**, choosing from predefined tick-width intervals (e.g., {0, 20, 50}). While the action space must remain discrete, **participants are free to customize** the number and values of tick-width options provided to the agent if they believe this improves performance.
 
+By default, each action maps to placing liquidity in a symmetric price range around the current tick. However, participants are encouraged to experiment with more advanced strategies, such as:
+
+- Not deploying the entire portfolio at each step
+
+- Using asymmetric price ranges
+
+- Splitting capital across multiple active price ranges simultaneously
+
+These alternatives may require modifying the internal logic that translates agent actions into liquidity provisioning decisions.
+Participants must ensure compatibility with the Gymnasium environment and maintain clear documentation of any changes made.
+
+We recommend that all submissions include the symmetric single-range strategy as a baseline for comparison, even if additional strategies are explored.
+
 ### Environment and Reward Function
 
 The environment implementation provided in the starter kit **must remain unchanged**. In particular:
