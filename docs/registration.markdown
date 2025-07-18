@@ -9,7 +9,7 @@ weight: 2
 * **Team Registration Begin**: June 27, 2025
 
   <span style="color:red;">Register your team [here](https://docs.google.com/forms/d/e/1FAIpQLSeeJ8HsQpgFTrVoz1eSPteeZBe59KP5VbeX9qDwfArUy17TMQ/viewform?usp=header)</span>
-* **Starter-Kit Release**: July 2, 2025
+* **Starter-Kit Release**: July 7, 2025
 
   <span style="color:red;">Find starter kit [here](https://github.com/Open-Finance-Lab/FinAI_Contest_2025)</span>
 * **Paper Submission Deadline**: Aug 1, 2025
