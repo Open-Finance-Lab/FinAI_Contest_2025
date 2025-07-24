@@ -86,6 +86,7 @@ class Uniswapv3Env(gym.Env):
         # gas fee
         self.gas = gas
         self.x = x
+        self.initial_x = x
         
         # Boundaries to choose
         lower_bounds = []
@@ -145,7 +146,7 @@ class Uniswapv3Env(gym.Env):
         self.dx = self.dx[ma_window_max:]
         
         self.market_data = self.market_data[ma_window_max:]
-        
+        self.ew_sigma = self.ew_sigma[ma_window_max-1:] # We use a -1 because we compute the ew_sigma on the log returns, which are shifted by one time step.
             
     def reset(self, **kwargs):
     
@@ -168,6 +169,7 @@ class Uniswapv3Env(gym.Env):
         # print("RESET")
         # print("p_u: ", pu, " p_l: ", pl)
         # print("Initial x: ", self.x)
+        self.x = self.initial_x
         self.l = self.x / (1/np.sqrt(pt) - 1/np.sqrt(pu))
         # print("Initial liquidity: ", self.l)
         
