@@ -9,7 +9,7 @@ weight: 3
 
 ### **Model Submission Requirements**:
 
-Please provide your solution to [TBD](). Each team can submit multiple times and we will only use the latest version you submit. Your models and scripts should be accessible and runnable.
+Please provide your solution to [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSdV386QQvJ_5iWWazauubXguk5ExUGZIiBbZyhKLSfcEOUW2Q/viewform?usp=sharing&ouid=113387476409319394905). Each team can submit multiple times and we will only use the latest version you submit. Your models and scripts should be accessible and runnable.
 
 #### **Task I FinRL-DeepSeek for Crypto Trading**
 
