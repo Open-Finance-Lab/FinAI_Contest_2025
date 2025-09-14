@@ -15,7 +15,8 @@ weight: 2
 * **Paper Submission Deadline**: ~~Aug 1, 2025~~ Aug 31, 2025
 * **Paper Notification**: ~~Sept 1, 2025~~ Sept 15, 2025
 * **Paper Cemera Ready**: Oct 1, 2025
-* **Solution Submission Deadline**: Sept 15, 2025
+* **Solution Submission Deadline**: ~~Sept 15, 2025~~ Sept 18, 2025
+  Please submit your model [here](https://docs.google.com/forms/d/e/1FAIpQLSdV386QQvJ_5iWWazauubXguk5ExUGZIiBbZyhKLSfcEOUW2Q/viewform?usp=sharing&ouid=113387476409319394905)
 * **Winner Notification**: Oct 15, 2025
 * **Winner Announcement**: Nov 7-9, IEEE CS Cloud Conference
 
